@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May Peace Prevail on Earth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Playfair+Display:italic,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #e0f2f7;
+            --peace-blue: #4a90e2;
+            --olive-green: #6b8e23;
+            --soft-white: #ffffff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(180deg, var(--sky-blue) 0%, #ffffff 100%);
+            color: #333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .dove-container {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 10px 0;
+            color: var(--peace-blue);
+        }
+
+        p.subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            max-width: 600px;
+        }
+
+        /* Quotes Section */
+        .quotes-section {
+            padding: 100px 20px;
+            background: rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+
+        .quote-card {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* Interactive Peace Wall */
+        .peace-wall {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .wish-input-container {
+            margin-bottom: 40px;
+        }
+
+        input[type="text"] {
+            padding: 15px 25px;
+            width: 300px;
+            border: 2px solid var(--peace-blue);
+            border-radius: 30px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: var(--peace-blue);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        #wall-display {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .wish-tag {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            animation: fadeIn 0.8s ease-out;
+            border-left: 4px solid var(--olive-green);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        footer {
+            padding: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* SVG Styling */
+        .dove-svg {
+            fill: var(--peace-blue);
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="dove-container">
+            <!-- Peace Dove SVG Icon -->
+            <svg class="dove-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M496.3 126.9c-12.1-4.7-25.2-1.4-33.4 8.1l-25.5 29.6c-20.1-13.8-43.9-22-69.6-22.9-2.5-18.8-12.7-35.1-27.1-45.7 15.3-25.2 38.3-43.7 65.6-51.5 10.3-2.9 16.3-13.6 13.4-23.9S405.1 7.3 394.8 10.2c-40.4 11.5-73.6 39.1-92.3 75.3-15.3-2.6-31.1-1.4-45.6 4.1-32.8 12.5-54.3 43.1-55.6 78.1l-143.1 63.3c-13.4 5.9-19.4 21.6-13.5 35 5.9 13.4 21.6 19.4 35 13.5l143.1-63.3c.1 .4 .2 .8 .4 1.2 5.3 14.4 16.3 25.5 30.7 30.7 4.1 1.5 8.3 2.2 12.5 2.2 10.3 0 20.3-4.4 27.2-12.5 9.5-11.2 10.1-27.4 2.1-39.7 15.6-11 34.6-17.6 55.3-18.3 11.7 15.4 30.1 25.4 51 25.4 11.2 0 21.6-2.9 30.7-8.1l25.5 29.6c5.5 6.4 13.4 9.9 21.7 9.9 4 0 8.1-.8 11.8-2.6 12.1-5.7 17.2-20.2 11.4-32.3l-26.7-56.1 26.7-56.1c5.8-12.1 .7-26.6-11.4-32.3z"/>
+            </svg>
+        </div>
+        <h1>May Peace Prevail</h1>
+        <p class="subtitle">Imagine all the people living life in peace. You may say I'm a dreamer, but I'm not the only one.</p>
+        <div style="margin-top: 30px;">
+            <a href="#wall" style="text-decoration: none; color: var(--peace-blue); font-weight: bold;">Send a Wish ↓</a>
+        </div>
+    </header>
+
+    <section class="quotes-section">
+        <div class="quote-card" id="quote-display">
+            "Peace begins with a smile."
+            <br>
+            <small style="font-size: 1rem; font-style: normal;">— Mother Teresa</small>
+        </div>
+    </section>
+
+    <section class="peace-wall" id="wall">
+        <h2>The Global Peace Wall</h2>
+        <p>Leave a message of hope for the world.</p>
+        
+        <div class="wish-input-container">
+            <input type="text" id="wishInput" placeholder="Write your wish here..." maxlength="50">
+            <button onclick="addWish()">Share Wish</button>
+        </div>
+
+        <div id="wall-display">
+            <!-- Initial Wishes -->
+            <div class="wish-tag">End all conflicts</div>
+            <div class="wish-tag">Love for every child</div>
+            <div class="wish-tag">Borders without barriers</div>
+            <div class="wish-tag">Kindness is the universal language</div>
+            <div class="wish-tag">Harmony with nature</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Unity Project. Designed with hope for a better tomorrow.</p>
+        <p>🕊️ 🌍 🤝</p>
+    </footer>
+
+    <script>
+        // Rotating Quotes
+        const quotes = [
+            { text: "Peace begins with a smile.", author: "Mother Teresa" },
+            { text: "When the power of love overcomes the love of power, the world will know peace.", author: "Jimi Hendrix" },
+            { text: "Darkness cannot drive out darkness; only light can do that.", author: "Martin Luther King Jr." },
+            { text: "Peace is not merely a distant goal that we seek, but a means by which we arrive at that goal.", author: "A.J. Muste" },
+            { text: "An eye for an eye will only make the whole world blind.", author: "Mahatma Gandhi" }
+        ];
+
+        let quoteIndex = 0;
+        const quoteDisplay = document.getElementById('quote-display');
+
+        function rotateQuote() {
+            quoteIndex = (quoteIndex + 1) % quotes.length;
+            quoteDisplay.style.opacity = 0;
+            setTimeout(() => {
+                quoteDisplay.innerHTML = `"${quotes[quoteIndex].text}"<br><small style="font-size: 1rem; font-style: normal;">— ${quotes[quoteIndex].author}</small>`;
+                quoteDisplay.style.opacity = 1;
+            }, 500);
+        }
+
+        setInterval(rotateQuote, 5000);
+
+        // Add Wish Functionality
+        function addWish() {
+            const input = document.getElementById('wishInput');
+            const wall = document.getElementById('wall-display');
+            
+            if (input.value.trim() !== "") {
+                const newWish = document.createElement('div');
+                newWish.className = 'wish-tag';
+                newWish.innerText = input.value;
+                
+                // Add to the beginning of the wall
+                wall.insertBefore(newWish, wall.firstChild);
+                
+                // Clear input
+                input.value = "";
+                
+                // Smooth scroll to see the new wish
+                newWish.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                alert("Please enter a wish for the world!");
+            }
+        }
+
+        // Allow 'Enter' key to submit
+        document.getElementById('wishInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                addWish();
+            }
+        });
+    </script>
+</body>
+</html>
